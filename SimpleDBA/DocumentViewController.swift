@@ -12,7 +12,9 @@ class DocumentViewController: UIViewController {
     
     @IBOutlet weak var documentNameLabel: UILabel!
     
-    var document: UIDocument?
+    @IBOutlet var textView: UITextView!
+    
+    var document: TextDocument?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +31,14 @@ class DocumentViewController: UIViewController {
     }
     
     @IBAction func dismissDocumentViewController() {
+        self.document?.userText = self.textView.text
+        self.document?.save(to: self.document!.fileURL, for: UIDocumentSaveOperation.forOverwriting, completionHandler: { (success) in
+            if (success) {
+                print("Success")
+            } else {
+                print("Fail")
+            }
+        })
         dismiss(animated: true) {
             self.document?.close(completionHandler: nil)
         }
