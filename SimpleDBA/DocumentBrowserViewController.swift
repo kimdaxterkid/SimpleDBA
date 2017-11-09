@@ -11,6 +11,7 @@ import UIKit
 
 class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocumentBrowserViewControllerDelegate {
     
+    let applicationDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,13 +19,10 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         
         allowsDocumentCreation = true
         allowsPickingMultipleItems = false
-        print("Allowed content types: \(self.allowedContentTypes)")
-        print("Allowed content types: \(self.allowsDocumentCreation)")
-        print("Allowed content types: \(self.allowsPickingMultipleItems)")
         
         // Update the style of the UIDocumentBrowserViewController
-        // browserUserInterfaceStyle = .dark
-        // view.tintColor = .white
+        browserUserInterfaceStyle = .dark
+        view.tintColor = .white
         
         // Specify the allowed content types of your application via the Info.plist.
         
@@ -35,7 +33,8 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     // MARK: UIDocumentBrowserViewControllerDelegate
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler importHandler: @escaping (URL?, UIDocumentBrowserViewController.ImportMode) -> Void) {
-        let newDocumentURL = Bundle.main.url(forResource: "test", withExtension: "txt")
+        
+        let newDocumentURL = Bundle.main.url(forResource: "Demo", withExtension: "txt")
         // Set the URL for the new document here. Optionally, you can present a template chooser before calling the importHandler.
         // Make sure the importHandler is always called, even if the user cancels the creation request.
         if newDocumentURL != nil {
@@ -43,6 +42,7 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
         } else {
             importHandler(nil, .none)
         }
+        
     }
     
     func documentBrowser(_ controller: UIDocumentBrowserViewController, didPickDocumentURLs documentURLs: [URL]) {
@@ -65,11 +65,9 @@ class DocumentBrowserViewController: UIDocumentBrowserViewController, UIDocument
     // MARK: Document Presentation
     
     func presentDocument(at documentURL: URL) {
-        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let documentViewController = storyBoard.instantiateViewController(withIdentifier: "DocumentViewController") as! DocumentViewController
         documentViewController.document = TextDocument(fileURL: documentURL)
-        
         present(documentViewController, animated: true, completion: nil)
     }
 }

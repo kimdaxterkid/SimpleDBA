@@ -13,11 +13,11 @@ class TextDocument: UIDocument {
     var userText: String? = "Default Text"
     
     override func contents(forType typeName: String) throws -> Any {
-        
         // Encode your document with an instance of NSData or NSFileWrapper
         if let content = userText {
             let length = content.lengthOfBytes(using: String.Encoding.utf8)
-            return NSData(bytes:content, length: length)
+//            return NSData(bytes:content, length: length)
+            return Data(bytes: content, count: length)
         } else {
             return Data()
         }

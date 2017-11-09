@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		621A4EA01FB3BC5B008B6BFA /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 621A4E9F1FB3BC5A008B6BFA /* test.txt */; };
+		621A4EA01FB3BC5B008B6BFA /* Demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 621A4E9F1FB3BC5A008B6BFA /* Demo.txt */; };
 		62E073511FB3A1DA00D6D57C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E073501FB3A1DA00D6D57C /* AppDelegate.swift */; };
 		62E073531FB3A1DA00D6D57C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E073521FB3A1DA00D6D57C /* DocumentBrowserViewController.swift */; };
 		62E073551FB3A1DA00D6D57C /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E073541FB3A1DA00D6D57C /* DocumentViewController.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		621A4E9F1FB3BC5A008B6BFA /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		621A4E9F1FB3BC5A008B6BFA /* Demo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Demo.txt; sourceTree = "<group>"; };
 		62E0734D1FB3A1DA00D6D57C /* SimpleDBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E073501FB3A1DA00D6D57C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E073521FB3A1DA00D6D57C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -60,13 +60,13 @@
 		62E0734F1FB3A1DA00D6D57C /* SimpleDBA */ = {
 			isa = PBXGroup;
 			children = (
-				621A4E9F1FB3BC5A008B6BFA /* test.txt */,
 				62E073501FB3A1DA00D6D57C /* AppDelegate.swift */,
 				62E073521FB3A1DA00D6D57C /* DocumentBrowserViewController.swift */,
 				62E073541FB3A1DA00D6D57C /* DocumentViewController.swift */,
 				62E073561FB3A1DA00D6D57C /* TextDocument.swift */,
 				62E073581FB3A1DA00D6D57C /* Main.storyboard */,
 				62E0735B1FB3A1DA00D6D57C /* Assets.xcassets */,
+				621A4E9F1FB3BC5A008B6BFA /* Demo.txt */,
 				62E0735D1FB3A1DA00D6D57C /* LaunchScreen.storyboard */,
 				62E073601FB3A1DA00D6D57C /* Info.plist */,
 			);
@@ -134,7 +134,7 @@
 			files = (
 				62E0735F1FB3A1DA00D6D57C /* LaunchScreen.storyboard in Resources */,
 				62E0735C1FB3A1DA00D6D57C /* Assets.xcassets in Resources */,
-				621A4EA01FB3BC5B008B6BFA /* test.txt in Resources */,
+				621A4EA01FB3BC5B008B6BFA /* Demo.txt in Resources */,
 				62E0735A1FB3A1DA00D6D57C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

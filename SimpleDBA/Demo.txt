@@ -1,0 +1,3 @@
+Welcome to SimpleDBA
+
+This is the simple text for the SimpleDBA.app.
